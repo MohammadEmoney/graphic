@@ -6,10 +6,14 @@ use App\Filament\Resources\AttributeResource\Pages;
 use App\Filament\Resources\AttributeResource\RelationManagers;
 use App\Models\Attribute;
 use Filament\Forms;
+use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -25,7 +29,11 @@ class AttributeResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Card::make()->schema([
+                    TextInput::make('name')->required(),
+                    TextInput::make('slug')->required(),
+                    Textarea::make('description')->maxLength(255)->columnSpan('full'),
+                ])->columns(2)
             ]);
     }
 
@@ -33,7 +41,9 @@ class AttributeResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->sortable()->searchable(),
+                TextColumn::make('slug')->sortable()->searchable(),
+                TextColumn::make('description')->sortable()->searchable(),
             ])
             ->filters([
                 //

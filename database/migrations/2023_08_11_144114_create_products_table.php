@@ -15,13 +15,19 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
             $table->string('name');
             $table->string('slug')->unique();
-            $table->text('short_description')->nullable();
-            $table->longText('description')->nullable();
-            $table->string('type')->nullable(); // Downloadable, Physical
-            $table->bigInteger('price')->default(0);
-            $table->tinyInteger('discount_percentage')->default(0);
+            $table->foreignId('category_id')->nullable()->constrained()->nullOnDelete();
+            $table->string('short_description')->nullable();
+            $table->text('description')->nullable();
+            $table->string('sku')->nullable();
+            $table->float('price')->default(0);
+            $table->float('discount_price')->default(0);
+            $table->integer('discount_percentage')->default(0);
+            $table->boolean('is_active')->default(0);
+            $table->boolean('is_featured')->default(0);
+            $table->longText('meta')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

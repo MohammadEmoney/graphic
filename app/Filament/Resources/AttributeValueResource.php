@@ -4,12 +4,17 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\AttributeValueResource\Pages;
 use App\Filament\Resources\AttributeValueResource\RelationManagers;
+use App\Models\Attribute;
 use App\Models\AttributeValue;
 use Filament\Forms;
+use Filament\Forms\Components\Card;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -25,7 +30,11 @@ class AttributeValueResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Card::make()->schema([
+                    TextInput::make('name')->required(),
+                    TextInput::make('slug')->required(),
+                    Select::make('attribute_id')->options(Attribute::pluck('name', 'id')->toArray())->required(),
+                ])
             ]);
     }
 
@@ -33,7 +42,9 @@ class AttributeValueResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->sortable()->searchable(),
+                TextColumn::make('slug')->sortable()->searchable(),
+                TextColumn::make('attribute.name')->sortable()->searchable(),
             ])
             ->filters([
                 //

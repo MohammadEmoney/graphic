@@ -15,18 +15,11 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
             $table->string('name');
             $table->string('slug')->unique();
-            $table->foreignId('category_id')->nullable()->constrained()->nullOnDelete();
-            $table->string('short_description')->nullable();
             $table->text('description')->nullable();
-            $table->string('sku')->nullable();
-            $table->float('price')->default(0);
-            $table->float('discount_price')->default(0);
-            $table->integer('discount_percentage')->default(0);
-            $table->boolean('is_active')->default(0);
-            $table->longText('meta')->nullable();
+            $table->string('type')->nullable();
+            $table->nestedSet();
             $table->softDeletes();
             $table->timestamps();
         });
