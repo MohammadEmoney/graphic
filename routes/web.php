@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::controller(ProductController::class)->group(function(){
+    Route::get('products', 'index')->name('products.index');
+    Route::get('products/{product:slug}', 'show')->name('products.show');
+});
+Route::controller(CategoryController::class)->group(function(){
+    Route::get('categories', 'index')->name('categories.index');
+    Route::get('categories/{category:slug}', 'show')->name('categories.show');
+});

@@ -124,24 +124,26 @@
                         <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel"
                             aria-labelledby="design-tab" tabindex="0">
                             <div class="row">
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Web Design</h5>
+                                @foreach ($products as $product)
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="{{ route('products.show', $product) }}">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">{{ $product->name }}</h5>
 
-                                                    <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                        <p class="mb-0">{{ $product->short_description }}</p>
+                                                    </div>
+
+                                                    <span class="badge bg-design rounded-pill ms-auto">{{ $product->views }}</span>
                                                 </div>
 
-                                                <span class="badge bg-design rounded-pill ms-auto">14</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_Remote_design_team_re_urdx.png"
-                                                class="custom-block-image img-fluid" alt="">
-                                        </a>
+                                                <img src="{{ $product->getFirstMediaUrl('FeaturedImage') }}"
+                                                    class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
+                                @endforeach
 
                                 <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                                     <div class="custom-block bg-white shadow-lg">
