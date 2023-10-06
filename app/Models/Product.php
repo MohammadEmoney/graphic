@@ -7,12 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Image\Manipulations;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Tags\HasSlug;
 use Spatie\Tags\HasTags;
 
-class Product extends Model
+class Product extends Model implements HasMedia
 {
-    use HasFactory, SoftDeletes, HasTags, HasSlug;
+    use HasFactory, SoftDeletes, HasTags, HasSlug ,InteractsWithMedia;
 
     /**
      * The attributes that are mass assignable.
@@ -32,7 +36,9 @@ class Product extends Model
         'discount_percentage',
         'is_active',
         'is_featured',
+        'published_at',
         'meta',
+        'views',
     ];
 
     /**
@@ -86,5 +92,14 @@ class Product extends Model
     public function scopeIsActive($query)
     {
         $query->where('is_active', 1);
+    }
+
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaCollection('FeaturedImage')
+            ->useFallbackPath(public_path('/images/hero-background-icons (1).jpg'));
+        $this->addMediaConversion('thumb')
+            ->fit(Manipulations::FIT_STRETCH, 400, 333)
+            ->performOnCollections('FeaturedImage')->nonQueued();
     }
 }

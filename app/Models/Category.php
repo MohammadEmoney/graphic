@@ -22,8 +22,20 @@ class Category extends Model
     protected $fillable = [
         'name',
         'slug',
+        'parent_id',
+        'is_active',
         'description',
         'type',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'is_active' => 'boolean',
+        'published_at' => 'datetime',
     ];
 
     /**

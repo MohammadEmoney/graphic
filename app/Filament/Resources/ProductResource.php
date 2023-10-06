@@ -107,6 +107,7 @@ class ProductResource extends Resource
                 IconColumn::make('is_featured')->sortable()->boolean(),
                 TextColumn::make('created_at')->dateTime(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 Filter::make('is_active')
                     ->query(fn (Builder $query) => $query->where('is_active', true)),

@@ -28,6 +28,8 @@ return new class extends Migration
             $table->boolean('is_active')->default(0);
             $table->boolean('is_featured')->default(0);
             $table->longText('meta')->nullable();
+            $table->timestamp('published_at')->nullable();
+            $table->bigInteger('views')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

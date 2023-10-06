@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('description')->nullable();
             $table->string('type')->nullable();
+            $table->boolean('is_active')->default(1);
             $table->nestedSet();
             $table->softDeletes();
             $table->timestamps();

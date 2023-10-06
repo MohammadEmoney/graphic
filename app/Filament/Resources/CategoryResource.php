@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Filament\Resources\CategoryResource\RelationManagers;
 use App\Models\Category;
+use Appp\Enums\CategoryTypes;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\RichEditor;
@@ -20,6 +21,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\Filter;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -38,10 +40,8 @@ class CategoryResource extends Resource
                 TextInput::make('name')->required()->maxLength(255),
                 TextInput::make('slug')->required()->maxLength(255),
                 Select::make('category_id')->label('Parent')->options(Category::pluck('name', 'id')->toArray()),
-                TextInput::make('discount_price'),
-                Toggle::make('is_active')->required(),
-                Toggle::make('is_featured')->required(),
-                Textarea::make('short_description')->columnSpan(2),
+                Select::make('type')->label('Parent')->options(CategoryTypes::cases())->required(),
+                Toggle::make('is_active'),
                 RichEditor::make('description')->columnSpan(2),
 
                 Section::make('Media')
@@ -50,16 +50,6 @@ class CategoryResource extends Resource
                         SpatieMediaLibraryFileUpload::make('FeaturedImage')
                             ->responsiveImages()
                             ->collection('FeaturedImage'),
-                        SpatieMediaLibraryFileUpload::make('Gallery')
-                            ->responsiveImages()
-                            ->collection('Gallery'),
-                    ]),
-
-                Section::make('Category and Tags')
-                    ->description('Categories and Tags')
-                    ->schema([
-                        Select::make('category_id')->options(Category::pluck('name', 'id')->toArray())->required(),
-                        // Select::make('tags')->options(Tag::pluck('name', 'id')->toArray())->required(),
                     ]),
             ]);
     }
@@ -70,15 +60,15 @@ class CategoryResource extends Resource
             ->columns([
                 TextColumn::make('name')->label(__('Name'))->sortable()->searchable(),
                 TextColumn::make('slug')->label(__('Slug'))->sortable()->searchable(),
-                TextColumn::make('sku')->label(__('Sku'))->sortable()->searchable(),
-                TextColumn::make('price')->label(__('Price'))->money('IRR')->sortable()->searchable(),
-                TextColumn::make('discount_price')->label(__('Discount Price'))->sortable()->searchable(),
+                TextColumn::make('type')->label(__('Tye'))->sortable()->searchable(),
+                TextColumn::make('parent.name')->label(__('Parent'))->sortable(),
                 IconColumn::make('is_active')->sortable()->boolean(),
-                IconColumn::make('is_featured')->sortable()->boolean(),
                 TextColumn::make('created_at')->dateTime(),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
-                //
+                Filter::make('is_active')
+                    ->query(fn (Builder $query) => $query->where('is_active', true)),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
