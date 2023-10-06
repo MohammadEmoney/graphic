@@ -97,7 +97,7 @@ class Product extends Model implements HasMedia
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaCollection('FeaturedImage')
-            ->useFallbackPath(public_path('/images/hero-background-icons (1).jpg'));
+            ->useFallbackPath(public_path('/images/placeholder.png'));
         $this->addMediaConversion('thumb')
             ->fit(Manipulations::FIT_STRETCH, 400, 333)
             ->performOnCollections('FeaturedImage')->nonQueued();
