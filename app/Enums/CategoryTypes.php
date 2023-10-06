@@ -12,4 +12,6 @@ enum CategoryTypes:string
     case IMAGE = 'image';
     case PSD = 'psd';
     case ACCESSORIES = 'accessories';
+    case BLOG = 'blog';
+    case TICKET = 'ticket';
 }
