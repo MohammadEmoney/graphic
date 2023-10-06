@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Filament\Resources\CategoryResource\RelationManagers;
 use App\Models\Category;
-use Appp\Enums\CategoryTypes;
+use App\Enums\CategoryTypes;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\RichEditor;
@@ -40,7 +40,7 @@ class CategoryResource extends Resource
                 TextInput::make('name')->required()->maxLength(255),
                 TextInput::make('slug')->required()->maxLength(255),
                 Select::make('category_id')->label('Parent')->options(Category::pluck('name', 'id')->toArray()),
-                Select::make('type')->label('Parent')->options(CategoryTypes::cases())->required(),
+                Select::make('type')->label('Type')->options(CategoryTypes::array())->required(),
                 Toggle::make('is_active'),
                 RichEditor::make('description')->columnSpan(2),
 

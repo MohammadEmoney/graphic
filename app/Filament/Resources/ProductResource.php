@@ -63,13 +63,19 @@ class ProductResource extends Resource
                             ->collection('FeaturedImage'),
                         SpatieMediaLibraryFileUpload::make('Gallery')
                             ->responsiveImages()
+                            ->multiple()
                             ->collection('Gallery'),
                     ]),
 
                 Section::make('Category and Tags')
                     ->description('Categories and Tags')
                     ->schema([
-                        Select::make('category_id')->options(Category::pluck('name', 'id')->toArray())->required(),
+                        Select::make('category_id')->label('Main Category')->options(Category::pluck('name', 'id')->toArray())->required(),
+                        Select::make('categories')->label('Other Categories')
+                            ->relationship('categories', 'name')
+                            ->searchable()
+                            ->multiple()
+                            ->preload()
                         // Select::make('tags')->options(Tag::pluck('name', 'id')->toArray())->required(),
                     ]),
                 Card::make()

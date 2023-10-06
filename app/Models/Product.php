@@ -11,7 +11,8 @@ use Spatie\Image\Manipulations;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use Spatie\Tags\HasSlug;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 use Spatie\Tags\HasTags;
 
 class Product extends Model implements HasMedia
@@ -101,5 +102,15 @@ class Product extends Model implements HasMedia
         $this->addMediaConversion('thumb')
             ->fit(Manipulations::FIT_STRETCH, 400, 333)
             ->performOnCollections('FeaturedImage')->nonQueued();
+    }
+
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('name')
+            ->saveSlugsTo('slug');
     }
 }

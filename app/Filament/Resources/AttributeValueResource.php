@@ -33,7 +33,7 @@ class AttributeValueResource extends Resource
                 Card::make()->schema([
                     TextInput::make('name')->required(),
                     TextInput::make('slug')->required(),
-                    Select::make('attribute_id')->options(Attribute::pluck('name', 'id')->toArray())->required(),
+                    Select::make('attribute_id')->label('Attribute')->options(Attribute::pluck('name', 'id')->toArray())->required(),
                 ])
             ]);
     }
