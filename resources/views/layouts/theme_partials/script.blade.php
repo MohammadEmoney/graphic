@@ -1,8 +1,10 @@
 <!-- JAVASCRIPT FILES -->
-<script src="{{ asset('theme/js/jquery.min.js') }}"></script>
-<script src="{{ asset('theme/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('theme/js/jquery.sticky.js') }}"></script>
-<script src="{{ asset('theme/js/click-scroll.js') }}"></script>
-<script src="{{ asset('theme/js/custom.js') }}"></script>
+<script src="{{ asset("theme/assets/js/jquery-3.2.1.min.js") }}"></script>
+<script src="{{ asset("theme/assets/js/owl.carousel.min.js") }}"></script>
+<script src="{{ asset("theme/assets/js/jquery.countdown.min.js") }}"></script>
+<script src="{{ asset("theme/assets/js/popper.min.js") }}"></script>
+<script src="{{ asset("theme/assets/js/bootstrap.js") }}"></script>
+<script src="{{ asset("theme/assets/js/sweetalert2.all.min.js") }}"></script>
+<script src="{{ asset("theme/assets/js/main.js") }}"></script>
 
 @stack('scripts')

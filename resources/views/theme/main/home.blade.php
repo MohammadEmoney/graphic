@@ -1,640 +1,1587 @@
 @extends('layouts.theme')
 
 @section('content')
-    @include('theme.main.hero')
-
-    <section class="featured-section">
-        <div class="container">
-            <div class="row justify-content-center">
-
-                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                    <div class="custom-block bg-white shadow-lg">
-                        <a href="topics-detail.html">
-                            <div class="d-flex">
-                                <div>
-                                    <h5 class="mb-2">Web Design</h5>
-
-                                    <p class="mb-0">When you search for free CSS templates, you will notice that TemplateMo
-                                        is one of the best websites.</p>
-                                </div>
-
-                                <span class="badge bg-design rounded-pill ms-auto">14</span>
-                            </div>
-
-                            <img src="{{ asset('theme/images/topics/undraw_Remote_design_team_re_urdx.png') }}"
-                                class="custom-block-image img-fluid" alt="">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="custom-block custom-block-overlay">
-                        <div class="d-flex flex-column h-100">
-                            <img src="/theme/images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid"
-                                alt="">
-
-                            <div class="custom-block-overlay-text d-flex">
-                                <div>
-                                    <h5 class="text-white mb-2">Finance</h5>
-
-                                    <p class="text-white">Topic Listing Template includes homepage, listing page, detail
-                                        page, and contact page. You can feel free to edit and adapt for your CMS
-                                        requirements.</p>
-
-                                    <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
-                                </div>
-
-                                <span class="badge bg-finance rounded-pill ms-auto">25</span>
-                            </div>
-
-                            <div class="social-share d-flex">
-                                <p class="text-white me-4">Share:</p>
-
-                                <ul class="social-icon">
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-twitter"></a>
-                                    </li>
-
-                                    <li class="social-icon-item">
-                                        <a href="#" class="social-icon-link bi-facebook"></a>
-                                    </li>Designms-auto"></a>
-                            </div>
-
-                            <div class="section-overlay"></div>
+    <main class="contentM">
+        <div class="main-slider">
+            <div class="main-slider-container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="/theme/assets/images/slider/2.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/theme/assets/images/slider/1.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/theme/assets/images/slider/3.jpg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/theme/assets/images/slider/4.jpg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/theme/assets/images/slider/5.jpg" alt="Third slide">
                         </div>
                     </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="fa fa-angle-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-
             </div>
         </div>
-    </section>
+        <!--    End Main Slider ---------------------->
 
-
-    <section class="explore-section section-padding" id="section_2">
-        <div class="container">Design
-
-            <div class="col-12 text-center">
-                <h2 class="mb-4">Browse Topics</h1>
-            </div>
-
-        </div>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="design-tab" data-bs-toggle="tab"
-                            data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane"
-                            aria-selected="true">Design</button>
-                    </li>
-
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="marketing-tab" data-bs-toggle="tab"
-                            data-bs-target="#marketing-tab-pane" type="button" role="tab"
-                            aria-controls="marketing-tab-pane" aria-selected="false">Marketing</button>
-                    </li>
-
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane"
-                            type="button" role="tab" aria-controls="finance-tab-pane"
-                            aria-selected="false">Finance</button>
-                    </li>
-
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane"
-                            type="button" role="tab" aria-controls="music-tab-pane"
-                            aria-selected="false">Music</button>
-                    </li>
-
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="education-tab" data-bs-toggle="tab"
-                            data-bs-target="#education-tab-pane" type="button" role="tab"
-                            aria-controls="education-tab-pane" aria-selected="false">Education</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-
-                <div class="col-12">
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel"
-                            aria-labelledby="design-tab" tabindex="0">
-                            <div class="row">
-                                @foreach ($products as $product)
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="{{ route('products.show', $product) }}">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">{{ $product->name }}</h5>
-
-                                                        <p class="mb-0">{{ $product->short_description }}</p>
+        <!--slider-amazing----------------------------->
+        <section class="section-slider amazing-section mb-3 mt-4" style="background: rgb(239, 57, 78);">
+            <div class="container-amazing">
+                <div class="container-main">
+                    <div>
+                        <div class="col-lg-3 display-md-none pull-right">
+                            <div class="amazing-product text-center mt-5">
+                                <a href="#">
+                                    <img src="/theme/assets/images/amazing/amazing.png" alt="amazing">
+                                </a>
+                                <a href="#" class="view-all-amazing-btn">
+                                    مشاهده همه
+                                    <i class="uil uil-angle-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-12 pull-left">
+                            <div class="section-slider-content">
+                                <div class="section-slider-product slider-amazing mt-3">
+                                    <div class="widget widget-product card" style="margin:0;">
+                                        <header class="card-header card-header-amazing">
+                                            <span class="title-one">پیشنهاد شگفت انگیز</span>
+                                            <a class="card-title pull-left">مشاهده همه</a>
+                                        </header>
+                                        <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                                            <div class="owl-stage-outer">
+                                                <div class="owl-stage"
+                                                    style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                                                    <div class="owl-item active"
+                                                        style="width: 309.083px; margin-left: 10px;">
+                                                        <div class="item">
+                                                            <a href="#">
+                                                                <img src="/theme/assets/images/product-slider-2/Knife.jpg"
+                                                                    class="img-fluid" alt="img-slider">
+                                                            </a>
+                                                            <h2 class="post-title">
+                                                                <a href="#">
+                                                                    تلویزیون ال ای دی هوشمند سامسونگ مدل 82NU8900 سایز
+                                                                    82
+                                                                    اینچ
+                                                                </a>
+                                                            </h2>
+                                                            <div class="price">
+                                                                <div class="discount-item">
+                                                                    <span>۳۲٪</span>
+                                                                </div>
+                                                                <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                                                <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                                            </div>
+                                                            <div class="product-box-timer">
+                                                                <span class="fa fa-clock-o"></span>
+                                                                <div class="countdown countdown-style-3 h4"
+                                                                    data-date-time="10/10/2025 24:00"
+                                                                    data-labels='{"label-second": "", "label-minute": "", "label-hour": ""}'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-                                                    <span class="badge bg-design rounded-pill ms-auto">{{ $product->views }}</span>
+                                                    <div class="owl-item active"
+                                                        style="width: 309.083px; margin-left: 10px;">
+                                                        <div class="item">
+                                                            <a href="#">
+                                                                <img src="/theme/assets/images/product-slider-2/phone.jpg"
+                                                                    class="img-fluid" alt="img-slider">
+                                                            </a>
+                                                            <h2 class="post-title">
+                                                                <a href="#">
+                                                                    تلویزیون ال ای دی هوشمند سامسونگ مدل 82NU8900 سایز
+                                                                    82
+                                                                    اینچ
+                                                                </a>
+                                                            </h2>
+                                                            <div class="price">
+                                                                <div class="discount-item">
+                                                                    <span>۳۲٪</span>
+                                                                </div>
+                                                                <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                                                <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                                            </div>
+                                                            <div class="product-box-timer">
+                                                                <span class="fa fa-clock-o"></span>
+                                                                <div class="countdown countdown-style-3 h4"
+                                                                    data-date-time="10/10/2025 24:00"
+                                                                    data-labels='{"label-second": "", "label-minute": "", "label-hour": ""}'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item active"
+                                                        style="width: 309.083px; margin-left: 10px;">
+                                                        <div class="item">
+                                                            <a href="#">
+                                                                <img src="/theme/assets/images/product-slider-2/tishert.jpg"
+                                                                    class="img-fluid" alt="img-slider">
+                                                            </a>
+                                                            <h2 class="post-title">
+                                                                <a href="#">
+                                                                    تلویزیون ال ای دی هوشمند سامسونگ مدل 82NU8900 سایز
+                                                                    82
+                                                                    اینچ
+                                                                </a>
+                                                            </h2>
+                                                            <div class="price">
+                                                                <div class="discount-item">
+                                                                    <span>۳۲٪</span>
+                                                                </div>
+                                                                <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                                                <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                                            </div>
+                                                            <div class="product-box-timer">
+                                                                <span class="fa fa-clock-o"></span>
+                                                                <div class="countdown countdown-style-3 h4"
+                                                                    data-date-time="10/10/2025 24:00"
+                                                                    data-labels='{"label-second": "", "label-minute": "", "label-hour": ""}'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item active"
+                                                        style="width: 309.083px; margin-left: 10px;">
+                                                        <div class="item">
+                                                            <a href="#">
+                                                                <img src="/theme/assets/images/product-slider-2/headphone.jpg"
+                                                                    class="img-fluid" alt="img-slider">
+                                                            </a>
+                                                            <h2 class="post-title">
+                                                                <a href="#">
+                                                                    تلویزیون ال ای دی هوشمند سامسونگ مدل 82NU8900 سایز
+                                                                    82
+                                                                    اینچ
+                                                                </a>
+                                                            </h2>
+                                                            <div class="price">
+                                                                <div class="discount-item">
+                                                                    <span>۳۲٪</span>
+                                                                </div>
+                                                                <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                                                <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                                            </div>
+                                                            <div class="product-box-timer">
+                                                                <span class="fa fa-clock-o"></span>
+                                                                <div class="countdown countdown-style-3 h4"
+                                                                    data-date-time="10/10/2025 24:00"
+                                                                    data-labels='{"label-second": "", "label-minute": "", "label-hour": ""}'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                                        <div class="item">
+                                                            <a href="#">
+                                                                <img src="/theme/assets/images/product-slider-2/power-bank.jpg"
+                                                                    class="img-fluid" alt="img-slider">
+                                                            </a>
+                                                            <h2 class="post-title">
+                                                                <a href="#">
+                                                                    تلویزیون ال ای دی هوشمند سامسونگ مدل 82NU8900 سایز
+                                                                    82
+                                                                    اینچ
+                                                                </a>
+                                                            </h2>
+                                                            <div class="price">
+                                                                <div class="discount-item">
+                                                                    <span>۲۱٪</span>
+                                                                </div>
+                                                                <del><span>۱۵۹,۰۰۰<span>تومان</span></span></del>
+                                                                <ins><span>۱۳۹,۰۰۰<span>تومان</span></span></ins>
+                                                            </div>
+                                                            <div class="product-box-timer">
+                                                                <span class="fa fa-clock-o"></span>
+                                                                <div class="countdown countdown-style-3 h4"
+                                                                    data-date-time="10/10/2025 24:00"
+                                                                    data-labels='{"label-second": "", "label-minute": "", "label-hour": ""}'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                                        <div class="item">
+                                                            <a href="#">
+                                                                <img src="/theme/assets/images/product-slider-2/clock.jpg"
+                                                                    class="img-fluid" alt="img-slider">
+                                                            </a>
+                                                            <h2 class="post-title">
+                                                                <a href="#">
+                                                                    تلویزیون ال ای دی هوشمند سامسونگ مدل 82NU8900 سایز
+                                                                    82
+                                                                    اینچ
+                                                                </a>
+                                                            </h2>
+                                                            <div class="price">
+                                                                <div class="discount-item">
+                                                                    <span>۲۶٪</span>
+                                                                </div>
+                                                                <del><span>۱,۵۵۸,۷۰۰<span>تومان</span></span></del>
+                                                                <ins><span>۱,۱۴۹,۰۰۰ <span>تومان</span></span></ins>
+                                                            </div>
+                                                            <div class="product-box-timer">
+                                                                <span class="fa fa-clock-o"></span>
+                                                                <div class="countdown countdown-style-3 h4"
+                                                                    data-date-time="10/10/2025 24:00"
+                                                                    data-labels='{"label-second": "", "label-minute": "", "label-hour": ""}'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                                        <div class="item">
+                                                            <a href="#">
+                                                                <img src="/theme/assets/images/product-slider-2/backpack.jpg"
+                                                                    class="img-fluid" alt="img-slider">
+                                                            </a>
+                                                            <h2 class="post-title">
+                                                                <a href="#">
+                                                                    تلویزیون ال ای دی هوشمند سامسونگ مدل 82NU8900 سایز
+                                                                    82
+                                                                    اینچ
+                                                                </a>
+                                                            </h2>
+                                                            <div class="price">
+                                                                <div class="discount-item">
+                                                                    <span>۶۷٪</span>
+                                                                </div>
+                                                                <del><span>۸۱۹,۰۰۰<span>تومان</span></span></del>
+                                                                <ins><span>۲۶۹,۹۰۰<span>تومان</span></span></ins>
+                                                            </div>
+                                                            <div class="product-box-timer">
+                                                                <span class="fa fa-clock-o"></span>
+                                                                <div class="countdown countdown-style-3 h4"
+                                                                    data-date-time="10/10/2025 24:00"
+                                                                    data-labels='{"label-second": "", "label-minute": "", "label-hour": ""}'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-
-                                                <img src="{{ $product->getFirstMediaUrl('FeaturedImage') }}"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
-                                @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--slider-amazing--------------------->
+        <!--        category------------------->
+        <div class="container">
+            <!--   adplacement -------------------->
+            <div class="row">
+                <div class="adplacement">
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="item-adplacement">
+                            <img src="/theme/assets/images/post-adplacement/1000012860.jpg" title="صوتی و تصویری"
+                                alt="adplacement">
+                        </a>
+                    </div>
 
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Graphic</h5>
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="item-adplacement">
+                            <img src="/theme/assets/images/post-adplacement/1000012872.jpg" title="شوینده ظروف"
+                                alt="adplacement">
+                        </a>
+                    </div>
 
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="item-adplacement">
+                            <img src="/theme/assets/images/post-adplacement/1000013192.jpg" title="افس" alt="adplacement">
+                        </a>
+                    </div>
 
-                                                <span class="badge bg-design rounded-pill ms-auto">75</span>
-                                            </div>
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="item-adplacement">
+                            <img src="/theme/assets/images/post-adplacement/1000012909.jpg" title="مراقبت پوست و مو"
+                                alt="adplacement">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--   adplacement -------------------->
+            <div class="promotion-categories-container mt-4 mb-4">
+                <h5 class="promotion-categories-title">دسته‌بندی‌های دیجی‌استور</h5>
+                <div class="category-container">
+                    <div class="promotion-categories">
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/digital.png" alt="promotion-categories">
+                            <div class="promotion-category-name">کالای دیجیتال</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/Tool.png" alt="promotion-categories">
+                            <div class="promotion-category-name">خودرو، ابزار و اداری</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/clothing.png" alt="promotion-categories">
+                            <div class="promotion-category-name">مد و پوشاک</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/supermarket.png" alt="promotion-categories">
+                            <div class="promotion-category-name">کالای سوپرمارکتی</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/toy.png" alt="promotion-categories">
+                            <div class="promotion-category-name">اسباب بازی، کودک و نوزاد</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/native.png" alt="promotion-categories">
+                            <div class="promotion-category-name">محصولات بومی و محلی</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/Health.png" alt="promotion-categories">
+                            <div class="promotion-category-name">زیبایی و سلامت</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/kitchen.png" alt="promotion-categories">
+                            <div class="promotion-category-name">خانه و آشپزخانه</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/stationery.png" alt="promotion-categories">
+                            <div class="promotion-category-name">کتاب، لوازم تحریر و هنر</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <img src="/theme/assets/images/category/Sport.png" alt="promotion-categories">
+                            <div class="promotion-category-name">ورزش و سفر</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="widget widget-product card">
+                <header class="card-header">
+                    <span class="title-one">برندهای ویژه</span>
+                </header>
+                <div class="product-carousel brand-product owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/brand/1000005582.png" class="img-fluid" alt="brand">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/brand/1000006973.png" class="img-fluid" alt="brand">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/brand/1076.png" class="img-fluid" alt="brand">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/brand/1078.png" class="img-fluid" alt="brand">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/brand/1080.png" class="img-fluid" alt="brand">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/brand/1086.png" class="img-fluid" alt="brand">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/brand/2315.png" class="img-fluid" alt="brand">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--   slider-product-------------------->
+        <div class="container">
+            <!--   adplacement -------------------->
+            <div class="row">
+                <div class="adplacement">
+                    <div class="col-lg-6 col-xs-12">
+                        <a href="#" class="item-adplacement">
+                            <img src="/theme/assets/images/post-adplacement/1000013199.jpg" title="صوتی و تصویری"
+                                alt="adplacement">
+                        </a>
+                    </div>
 
-                                            <img src="/theme/images/topics/undraw_Redesign_feedback_re_jvm0.png"
-                                                class="custom-block-image img-fluid" alt="">
+                    <div class="col-lg-6 col-xs-12">
+                        <a href="#" class="item-adplacement">
+                            <img src="/theme/assets/images/post-adplacement/1000012919.jpg" title="شوینده ظروف"
+                                alt="adplacement">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--   adplacement -------------------->
+            <div class="promotion-categories-container mt-4 mb-4">
+                <h5 class="promotion-categories-title">پیشنهاد دیجی‌استور</h5>
+                <div class="category-container category-proposal">
+                    <div class="promotion-categories">
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/phone.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">کیف و کاور گوشی</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/car.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">سایر لوازم خودرو</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/headset.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">هدفون</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/Bag.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">کالای سوپرمارکتی</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/bed-set.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">اسباب بازی</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/bed.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">محصولات بومی و محلی</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/car-broadcast.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">زیبایی و سلامت</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/clothing.png" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">خانه و آشپزخانه</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/construction.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">کتاب، لوازم تحریر و هنر</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/Dress.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">ورزش و سفر</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/figure.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">ورزش و سفر</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/spare-parts.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">ورزش و سفر</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/pencil-case.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">ورزش و سفر</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/techniques.jpg" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">ورزش و سفر</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/native.png" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">ورزش و سفر</div>
+                        </a>
+                        <a href="#" class="promotion-category">
+                            <div class="img-category">
+                                <img src="/theme/assets/images/category/kitchen.png" alt="promotion-categories">
+                            </div>
+                            <div class="promotion-category-name">ورزش و سفر</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--   slider-product-------------->
+            <div class="widget widget-product card">
+                <header class="card-header">
+                    <span class="title-one">کفش</span>
+                </header>
+                <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                            style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                            <div class="owl-item active" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/rzai.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            کفش ورزشی مردانه مدل rzai
                                         </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del>
+                                            <span>70,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </del>
+                                        <ins>
+                                            <span>65,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Logo Design</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-design rounded-pill ms-auto">100</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/colleagues-working-cozy-office-medium-shot.png"
-                                                class="custom-block-image img-fluid" alt="">
+                            </div>
+                            <div class="owl-item active" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/d.r.j.e.27.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            کفش مخصوص دویدن مردانه مدل 27ِ.D.r.j.e
                                         </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del>
+                                            <span>109,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </del>
+                                        <ins>
+                                            <span>89,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/adiza001.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            کفش مخصوص پیاده روی مردانه کد adiza001
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del>
+                                            <span>90,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </del>
+                                        <ins>
+                                            <span>85,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/arshi-ad.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            کفش مخصوص دویدن مردانه مدل arshi-ad
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del>
+                                            <span>140,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </del>
+                                        <ins>
+                                            <span>137,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/jor-me-se.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            کفش مخصوص پیاده روی مردانه کد jor-me-se 001
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del>
+                                            <span>150,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </del>
+                                        <ins>
+                                            <span>89,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/270c.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            کفش مخصوص پیاده روی مردانه کد 270C
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del>
+                                            <span>170,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </del>
+                                        <ins>
+                                            <span>166,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/um.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            کفش مخصوص پیاده روی مردانه کد UM
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del>4
+                                            <span>198,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </del>
+                                        <ins>
+                                            <span>138,000
+                                                <span>تومان</span>
+                                            </span>
+                                        </ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!--   slider-product-------------------->
+        </div>
 
-                        <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel"
-                            aria-labelledby="marketing-tab" tabindex="0">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Advertising</h5>
+        <!--   adplacement -------------------->
+        <div class="adplacement">
+            <div class="col-6 col-lg-3">
+                <a href="#" class="item-adplacement">
+                    <img src="/theme/assets/images/post-adplacement/1000009159.jpg" title="صوتی و تصویری" alt="adplacement">
+                </a>
+            </div>
 
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
+            <div class="col-6 col-lg-3">
+                <a href="#" class="item-adplacement">
+                    <img src="/theme/assets/images/post-adplacement/1000010064.jpg" title="شوینده ظروف" alt="adplacement">
+                </a>
+            </div>
 
-                                                <span class="badge bg-advertising rounded-pill ms-auto">30</span>
-                                            </div>
+            <div class="col-6 col-lg-3">
+                <a href="#" class="item-adplacement">
+                    <img src="/theme/assets/images/post-adplacement/1000005397.jpg" title="افس" alt="adplacement">
+                </a>
+            </div>
 
-                                            <img src="/theme/images/topics/undraw_online_ad_re_ol62.png"
-                                                class="custom-block-image img-fluid" alt="">
-                                        </a>
-                                    </div>
+            <div class="col-6 col-lg-3">
+                <a href="#" class="item-adplacement">
+                    <img src="/theme/assets/images/post-adplacement/1000005393.jpg" title="مراقبت پوست و مو" alt="adplacement">
+                </a>
+            </div>
+        </div>
+        <!--   adplacement -------------------->
+        <div class="col-12">
+            <div class="promotion-categories-container mt-4 mb-4">
+                <h5 class="promotion-categories-title">پرفروش‌ترین کالاها</h5>
+                <div class="category-container mt-4">
+                    <div class="promotion-categories row">
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
                                 </div>
-
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Video Content</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-advertising rounded-pill ms-auto">65</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_Group_video_re_btu7.png"
-                                                class="custom-block-image img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Viral Tweet</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-advertising rounded-pill ms-auto">50</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_viral_tweet_gndb.png"
-                                                class="custom-block-image img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab"
-                            tabindex="0">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Investment</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-finance rounded-pill ms-auto">30</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_Finance_re_gnv2.png"
-                                                class="custom-block-image img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="custom-block custom-block-overlay">
-                                        <div class="d-flex flex-column h-100">
-                                            <img src="/theme/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg"
-                                                class="custom-block-image img-fluid" alt="">
-
-                                            <div class="custom-block-overlay-text d-flex">
-                                                <div>
-                                                    <h5 class="text-white mb-2">Finance</h5>
-
-                                                    <p class="text-white">Lorem ipsum dolor, sit amet consectetur
-                                                        adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam
-                                                        omnis</p>
-
-                                                    <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Learn
-                                                        More</a>
-                                                </div>
-
-                                                <span class="badge bg-finance rounded-pill ms-auto">25</span>
-                                            </div>
-
-                                            <div class="social-share d-flex">
-                                                <p class="text-white me-4">Share:</p>
-
-                                                <ul class="social-icon">
-                                                    <li class="social-icon-item">
-                                                        <a href="#" class="social-icon-link bi-twitter"></a>
-                                                    </li>
-
-                                                    <li class="social-icon-item">
-                                                        <a href="#" class="social-icon-link bi-facebook"></a>
-                                                    </li>
-
-                                                    <li class="social-icon-item">
-                                                        <a href="#" class="social-icon-link bi-pinterest"></a>
-                                                    </li>
-                                                </ul>
-
-                                                <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
-                                            </div>
-
-                                            <div class="section-overlay"></div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
                                         </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-12 mb-3">
+                            <!-- start of product-card -->
+                            <div class="product-card product-card-horizontal">
+                                <div class="product-thumbnail">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/category/galaxy-a14.webp" alt="ProductCard">
+                                    </a>
+                                </div>
+                                <div class="product-card-body">
+                                    <a href="#">
+                                        <h5>
+                                            گوشی موبایل سامسونگ مدل Galaxy A14 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت
+                                            - ویتنام
+                                        </h5>
+                                        <div class="price">
+                                            <del>
+                                                <span>150,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </del>
+                                            <ins>
+                                                <span>89,000
+                                                    <span>تومان</span>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- end of product-card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--   slider-product-------------------->
+        <div class="container">
+            <div class="widget widget-product card">
+                <header class="card-header">
+                    <span class="title-one">ساعت عقربه ای زنانه</span>
+                </header>
+                <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                            style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                            <div class="owl-item active" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/clock1.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            ساعت مچی عقربه ای 5موتور فعال ضدآب اسکمی مدل 9127
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                        <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab"
-                            tabindex="0">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Composing Song</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-music rounded-pill ms-auto">45</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_Compose_music_re_wpiw.png"
-                                                class="custom-block-image img-fluid" alt="">
+                            <div class="owl-item active" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/clock2.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            ساعت مچی عقربه ای 5موتور فعال ضدآب اسکمی مدل 9127
                                         </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                        <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
                                     </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Online Music</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-music rounded-pill ms-auto">45</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_happy_music_g6wc.png"
-                                                class="custom-block-image img-fluid" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-6 col-12">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Podcast</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-music rounded-pill ms-auto">20</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_Podcast_audience_re_4i5q.png"
-                                                class="custom-block-image img-fluid" alt="">
-                                        </a>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="education-tab-pane" role="tabpanel"
-                            aria-labelledby="education-tab" tabindex="0">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Graduation</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-education rounded-pill ms-auto">80</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_Graduation_re_gthn.png"
-                                                class="custom-block-image img-fluid" alt="">
+                            <div class="owl-item active" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/clock3.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            ساعت مچی عقربه ای 5موتور فعال ضدآب اسکمی مدل 9127
                                         </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                        <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="custom-block bg-white shadow-lg">
-                                        <a href="topics-detail.html">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <h5 class="mb-2">Educator</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                </div>
-
-                                                <span class="badge bg-education rounded-pill ms-auto">75</span>
-                                            </div>
-
-                                            <img src="/theme/images/topics/undraw_Educator_re_ju47.png"
-                                                class="custom-block-image img-fluid" alt="">
+                            </div>
+                            <div class="owl-item active" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/clock4.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            ساعت مچی عقربه ای 5موتور فعال ضدآب اسکمی مدل 9127
                                         </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                        <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/clock5.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            ساعت مچی عقربه ای 5موتور فعال ضدآب اسکمی مدل 9127
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                        <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/clock6.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            ساعت مچی عقربه ای 5موتور فعال ضدآب اسکمی مدل 9127
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                        <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 309.083px; margin-left: 10px;">
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="/theme/assets/images/product-slider-2/clock7.jpg" class="img-fluid"
+                                            alt="img-slider">
+                                    </a>
+                                    <h2 class="post-title">
+                                        <a href="#">
+                                            ساعت مچی عقربه ای 5موتور فعال ضدآب اسکمی مدل 9127
+                                        </a>
+                                    </h2>
+                                    <div class="price">
+                                        <del><span>۴,۵۳۰,۰۰۰<span>تومان</span></span></del>
+                                        <ins><span>۳,۳۹۵,۰۰۰<span>تومان</span></span></ins>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li class="action-item like">
+                                                <button class="btn btn-light add-product-wishes" type="submit"
+                                                    title="علاقه مندی">
+                                                    <i class="mdi mdi-heart"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item compare">
+                                                <button class="btn btn-light btn-compare" type="submit" title="مقایسه">
+                                                    <i class="mdi mdi-compare"></i>
+                                                </button>
+                                            </li>
+                                            <li class="action-item add-to-cart">
+                                                <button class="btn btn-light btn-add-to-cart" type="submit"
+                                                    title="سبد خرید">
+                                                    <i class="mdi mdi-shopping"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                </div>
-            </div>
-    </section>
-
-
-    <section class="timeline-section section-padding" id="section_3">
-        <div class="section-overlay"></div>
-
-        <div class="container">
-            <div class="row">
-
-                <div class="col-12 text-center">
-                    <h2 class="text-white mb-4">How does it work?</h1>
-                </div>
-
-                <div class="col-lg-10 col-12 mx-auto">
-                    <div class="timeline-container">
-                        <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
-                            <div class="list-progress">
-                                <div class="inner"></div>
-                            </div>
-
-                            <li>
-                                <h4 class="text-white mb-3">Search your favourite topic</h4>
-
-                                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
-                                    cumque magnam? Sequi, cupiditate quibusdam alias illum sed esse ad dignissimos libero
-                                    sunt, quisquam numquam aliquam? Voluptas, accusamus omnis?</p>
-
-                                <div class="icon-holder">
-                                    <i class="bi-search"></i>
-                                </div>
-                            </li>
-
-                            <li>
-                                <h4 class="text-white mb-3">Bookmark &amp; Keep it for yourself</h4>
-
-                                <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi
-                                    necessitatibus aperiam repudiandae nam omnis est vel quo, nihil repellat quia velit
-                                    error modi earum similique odit labore. Doloremque, repudiandae?</p>
-
-                                <div class="icon-holder">
-                                    <i class="bi-bookmark"></i>
-                                </div>
-                            </li>
-
-                            <li>
-                                <h4 class="text-white mb-3">Read &amp; Enjoy</h4>
-
-                                <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vero
-                                    quisquam, rem assumenda similique voluptas distinctio, iste est hic eveniet debitis ut
-                                    ducimus beatae id? Quam culpa deleniti officiis autem?</p>
-
-                                <div class="icon-holder">
-                                    <i class="bi-book"></i>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-12 text-center mt-5">
-                    <p class="text-white">
-                        Want to learn more?
-                        <a href="#" class="btn custom-btn custom-border-btn ms-3">Check out Youtube</a>
-                    </p>
                 </div>
             </div>
         </div>
-    </section>
-
-
-    <section class="faq-section section-padding" id="section_4">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-12">
-                    <h2 class="mb-4">Frequently Asked Questions</h2>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="col-lg-5 col-12">
-                    <img src="/theme/images/faq_graphic.jpg" class="img-fluid" alt="FAQs">
-                </div>
-
-                <div class="col-lg-6 col-12 m-auto">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    What is Topic Listing?
-                                </button>
-                            </h2>
-
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Topic Listing is free Bootstrap 5 CSS template. <strong>You are not allowed to
-                                        redistribute this template</strong> on any other template collection website without
-                                    our permission. Please contact TemplateMo for more detail. Thank you.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How to find a topic?
-                                </button>
-                            </h2>
-
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    You can search on Google with <strong>keywords</strong> such as templatemo portfolio,
-                                    templatemo one-page layouts, photography, digital marketing, etc.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Does it need to paid?
-                                </button>
-                            </h2>
-
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    You can modify any of this with custom CSS or overriding our default variables. It's
-                                    also worth noting that just about any HTML can go within the
-                                    <code>.accordion-body</code>, though the transition does limit overflow.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="contact-section section-padding section-bg" id="section_5">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 col-12 text-center">
-                    <h2 class="mb-5">Get in touch</h2>
-                </div>
-
-                <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                    <iframe class="google-map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.065641062665!2d-122.4230416990949!3d37.80335401520422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858127459fabad%3A0x808ba520e5e9edb7!2sFrancisco%20Park!5e1!3m2!1sen!2sth!4v1684340239744!5m2!1sen!2sth"
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
-                    <h4 class="mb-3">Head office</h4>
-
-                    <p>Bay St &amp;, Larkin St, San Francisco, CA 94109, United States</p>
-
-                    <hr>
-
-                    <p class="d-flex align-items-center mb-1">
-                        <span class="me-2">Phone</span>
-
-                        <a href="tel: 305-240-9671" class="site-footer-link">
-                            305-240-9671
-                        </a>
-                    </p>
-
-                    <p class="d-flex align-items-center">
-                        <span class="me-2">Email</span>
-
-                        <a href="mailto:info@company.com" class="site-footer-link">
-                            info@company.com
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mx-auto">
-                    <h4 class="mb-3">Dubai office</h4>
-
-                    <p>Burj Park, Downtown Dubai, United Arab Emirates</p>
-
-                    <hr>
-
-                    <p class="d-flex align-items-center mb-1">
-                        <span class="me-2">Phone</span>
-
-                        <a href="tel: 110-220-3400" class="site-footer-link">
-                            110-220-3400
-                        </a>
-                    </p>
-
-                    <p class="d-flex align-items-center">
-                        <span class="me-2">Email</span>
-
-                        <a href="mailto:info@company.com" class="site-footer-link">
-                            info@company.com
-                        </a>
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
+        <!--   slider-product-------------------->
+    </main>
 @endsection

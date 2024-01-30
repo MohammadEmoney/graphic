@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa">
     <head>
         @include('layouts.theme_partials.head')
     </head>

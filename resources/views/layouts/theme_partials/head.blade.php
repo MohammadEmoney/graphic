@@ -1,30 +1,18 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>@yield('title', 'Graphic')</title>
-
-<!-- CSS FILES -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
-    rel="stylesheet">
-
-<link href="{{ asset('theme/css/bootstrap.min.css') }}" rel="stylesheet">
-
-<link href="{{ asset('theme/css/bootstrap-icons.css') }}" rel="stylesheet">
-
-<link href="{{ asset('theme/css/templatemo-topic-listing.css') }}" rel="stylesheet">
-<!--
-
-            TemplateMo 590 topic listing
-
-            https://templatemo.com/tm-590-topic-listing
-
-            -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png"
+    href="https://www.digikala.com/mag/wp-content/themes/digikalamag/assets/common/img/ms-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="144x144"
+    href="https://www.digikala.com/mag/wp-content/themes/digikalamag/assets/common/img/ms-icon-144x144.png">
+<title>@yield('title', 'پیکسل')</title>
+<!--    font-->
+<link rel="stylesheet" href="{{ asset('theme/assets/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ asset('theme/assets/css/materialdesignicons.css') }}">
+<link rel="stylesheet" href="{{ asset('theme/assets/css/materialdesignicons.css.map') }}">
+<!--    font-->
+<link rel="stylesheet" href="{{ asset('theme/assets/css/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ asset('theme/assets/css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ asset('theme/assets/css/sweetalert2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('theme/assets/css/style.css') }}">
 
 @stack('styles')
